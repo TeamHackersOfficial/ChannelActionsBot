@@ -6,6 +6,8 @@ start-msg = Hi {$user}!
     - <i>Auto Decline New Join Requests.</i>
 
     <code>Click the below button to know how to use me!</code>
+    
+    <b>❤️ Made By @SecueBotsOfficial\nIf You Are Interested Check Once ❤️</b>
 
 help = <b>Usage instructions.</b>
     
