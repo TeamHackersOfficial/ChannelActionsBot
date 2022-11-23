@@ -108,7 +108,7 @@ bot
 bot.callbackQuery("helper", async (ctx) => {
   await ctx.editMessageText(
     ctx.t("help") +
-      "\n\nTo approve members who are already in waiting list, upgrade to premium for 3$ per month! Contact @xditya_bot if interested.",
+      "\n\n<b>❤️ Made By @SecueBotsOfficial\nIf You Are Interested Check Once ❤️</b>",
     {
       reply_markup: new InlineKeyboard().text("Main Menu 📭", "start"),
       parse_mode: "HTML",
