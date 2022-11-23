@@ -405,4 +405,4 @@ bot.command("setlang", async (ctx) => {
 
 await bot.init();
 console.info(`Started Bot - @${bot.botInfo.username}`);
-console.info("\nDo join @BotzHub!\nBy - @xditya.\n");
+console.info("\nDo join @SecureBotsOfficial!\nBy - @SecureBotsOfficial");
