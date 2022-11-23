@@ -99,7 +99,7 @@ bot
       parse_mode: "HTML",
       reply_markup: new InlineKeyboard()
         .text(ctx.t("usage-help"), "helper").row()
-        .url(ctx.t("updates"), "https://t.me/BotzHub"),
+        .url(ctx.t("updates"), "https://t.me/SecureBotsOfficial"),
       disable_web_page_preview: true,
     });
     await addUser(ctx.from.id);
@@ -123,7 +123,7 @@ bot.callbackQuery("start", async (ctx) => {
       {
         reply_markup: new InlineKeyboard()
           .text(ctx.t("usage-help"), "helper").row()
-          .url(ctx.t("updates"), "https://t.me/BotzHub"),
+          .url(ctx.t("updates"), "https://t.me/SecureBotsOfficial"),
         disable_web_page_preview: true,
         parse_mode: "HTML",
       },
