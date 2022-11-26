@@ -7,7 +7,7 @@ start-msg = Hi {$user}!
 
     <code>Click the below button to know how to use me!</code>
     
-    <b>❤️ Made By @SecueBotsOfficial
+    <b>❤️ Made By @SecureBotsOfficial
     
    If You Are Interested Check Once ❤️</b>
 
