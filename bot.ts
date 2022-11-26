@@ -108,7 +108,7 @@ bot
 bot.callbackQuery("helper", async (ctx) => {
   await ctx.editMessageText(
     ctx.t("help") +
-      "\n\n<b>❤️ Made By @SecueBotsOfficial\nIf You Are Interested Check Once ❤️</b>",
+      "\n\n<b>❤️ Made By @SecureBotsOfficial\nIf You Are Interested Check Once ❤️</b>",
     {
       reply_markup: new InlineKeyboard().text("Main Menu 📭", "start"),
       parse_mode: "HTML",
@@ -294,7 +294,7 @@ bot.on("chat_join_request", async (ctx) => {
     return;
   }
 
-  welcome += "\n\nSend /start to know more!\n\n❤️ Made By @SecueBotsOfficial\n\nIf You Are Interested Check Once ❤️";
+  welcome += "\n\nSend /start to know more!\n\n❤️ Made By @SecureBotsOfficial\n\nIf You Are Interested Check Once ❤️";
   welcome = welcome.replace("{name}", update.from.first_name).replace(
     "{chat}",
     update.chat.title,
