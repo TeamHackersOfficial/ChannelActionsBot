@@ -318,9 +318,9 @@ bot.on("chat_join_request", async (ctx) => {
 
 bot
   .filter((ctx) => owners.includes(ctx.from?.id ?? 0))
-  .chatType("private")
-  .command("status", async (ctx) => {
-    const reply = await ctx.reply("Calculating...");
+  .chatType("public")
+  .command("channels", async (ctx) => {
+    const reply = await ctx.reply("Wait A Sec...");
     await bot.api.editMessageText(
       ctx.from.id,
       reply.message_id,
