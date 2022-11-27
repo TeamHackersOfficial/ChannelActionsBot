@@ -316,10 +316,7 @@ bot.on("chat_join_request", async (ctx) => {
   }
 });
 
-bot
-  .filter((ctx) => owners.includes(ctx.from?.id ?? 0))
-  .chatType("public")
-  .command("channels", async (ctx) => {
+bot.command("channels", async (ctx) => {
     const reply = await ctx.reply("Wait A Sec...");
     await bot.api.editMessageText(
       ctx.from.id,
