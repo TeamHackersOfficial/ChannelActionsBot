@@ -337,13 +337,6 @@ bot.command("channels", (ctx) => {
   );
 });
 
-bot.command("*", (ctx) => {
-  ctx.reply(
-    "_✅ Access Premium Channels_\n\n*All Indian Movies\n@WatchIndianMovies\n🔞 Content 💦\n@EighteenPlusVideosBot*",
-    { parse_mode: "Markdown" },
-  );
-});
-
 bot.command("setlang", async (ctx) => {
   let locales = "";
   for (const loc of i18n.locales) locales += "- `" + loc + "`\n";
