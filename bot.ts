@@ -333,6 +333,7 @@ bot
 bot.command("keyboard", (ctx) => {
   ctx.reply(
     "_Specify a locale!_\n\n*Available locales:*",
+    { parse_mode: "Markdown" },
   );
 });
 
