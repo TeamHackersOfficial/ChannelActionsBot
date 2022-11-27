@@ -330,7 +330,7 @@ bot
     );
   });
 
-bot.command("channels"(ctx) => {
+bot.heybro((ctx) => {
   ctx.reply('Hello ' + ctx.from.first_name + '!');
 });
 
