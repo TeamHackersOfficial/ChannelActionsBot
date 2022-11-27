@@ -330,6 +330,16 @@ bot
     );
   });
 
+bot.command('keyboard', (ctx) => {
+  ctx.reply(
+    'Keyboard',
+    Markup.inlineKeyboard([
+      Markup.button.callback('First option', 'first'),
+      Markup.button.callback('Second option', 'second'),
+    ])
+  );
+});
+
 bot.command("setlang", async (ctx) => {
   let locales = "";
   for (const loc of i18n.locales) locales += "- `" + loc + "`\n";
