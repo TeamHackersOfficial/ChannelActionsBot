@@ -339,20 +339,6 @@ bot
     );
   });
 
-bot
-  .filter((ctx) => owners.includes(ctx.from?.id ?? 0))
-  .chatType("private")
-  .command("stats", async (ctx) => {
-    const reply = await ctx.reply("Calculating...");
-    await bot.api.editMessageText(
-      ctx.from.id,
-      reply.message_id,
-      `Total users: ${await countUsers()}\nChats with modified settings: ${
-        (await getAllSettings()).length
-      }`,
-    );
-  });
-
 bot.command("setlang", async (ctx) => {
   let locales = "";
   for (const loc of i18n.locales) locales += "- `" + loc + "`\n";
