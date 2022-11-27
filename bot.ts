@@ -330,13 +330,9 @@ bot
     );
   });
 
-bot.command('keyboard', (ctx) => {
+bot.command("keyboard", (ctx) => {
   ctx.reply(
-    'Keyboard',
-    Markup.inlineKeyboard([
-      Markup.button.callback('First option', 'first'),
-      Markup.button.callback('Second option', 'second'),
-    ])
+    "_Specify a locale!_\n\n*Available locales:*",
   );
 });
 
