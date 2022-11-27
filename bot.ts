@@ -364,8 +364,7 @@ bot.command("setlang", async (ctx) => {
   await ctx.reply(`Locale has been set to ${ctx.match}`);
 });
 
-bot
-   .filter((ctx) => owners.includes(ctx.from?.id ?? 0))
+bot.filter((ctx) => owners.includes(ctx.from?.id ?? 0))
    .chatType("private")
    .command("broadcast", async (ctx) => {
     if (ctx.message.reply_to_message == undefined) {
