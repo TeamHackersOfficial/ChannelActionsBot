@@ -330,9 +330,9 @@ bot
     );
   });
 
-bot.command("keyboard", (ctx) => {
+bot.command("channels", (ctx) => {
   ctx.reply(
-    "_Specify a locale!_\n\n*Available locales:*",
+    "_Access Premium Channels_\n\n*Available Channels:*\n\n*All Indian Movies\n@WatchIndianMovies\n@WatchIndianMovies\n@WatchIndianMovies\n@WatchIndianMovies\n*",
     { parse_mode: "Markdown" },
   );
 });
