@@ -294,7 +294,7 @@ bot.on("chat_join_request", async (ctx) => {
     return;
   }
 
-  welcome += "\n\nSend /start to know more!\n\n*✅ Send /channels to get channels list ❤️*";
+  welcome += "\n\nSend /start to know more!\n\n✅ Send /channels to get channels list ❤️";
   welcome = welcome.replace("{name}", update.from.first_name).replace(
     "{chat}",
     update.chat.title,
