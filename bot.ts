@@ -363,50 +363,6 @@ bot.command("setlang", async (ctx) => {
   await ctx.i18n.setLocale(ctx.match);
   await ctx.reply(`Locale has been set to ${ctx.match}`);
 });
-
-bot.filter((ctx) => owners.includes(ctx.from?.id ?? 0))
-   .chatType("private")
-   .command("broadcast", async (ctx) => {
-    if (ctx.message.reply_to_message == undefined) {
-       await ctx.reply("Please reply to a message!");
-      return;
-     }
-     const msg = await ctx.reply("Broadcast has been scheduled.");
-     const reply = ctx.message.reply_to_message;
-
-     broadcasts.set("broadcast", reply).set("message", msg);
-   });
-
- check every 2 minutes if a broadcast exists, and if yes, do it.
- cron("*/2  * * * *", async () => {
-   console.log("Checking for Broadcasts...")
-   const msg = broadcasts.get("message");
-   const reply = broadcasts.get("broadcast");
-   if (!msg || !reply) return;
-   console.log("Running Broadcast...")
-   const users = await getUsers();
-   let err = 0;
-   broadcasts.clear();
-   await bot.api.editMessageText(
-     msg.chat.id,
-     msg.message_id,
-     `Broadcast has started.`,
-   );
-   for (const user of users) {
-     try {
-       await bot.api.copyMessage(user, reply.chat.id, reply.message_id);
-     } catch (error) {
-       if (error.error_code == 403) continue;
-       err++;
-       console.log("Error while broadcasting: ", error.message);
-       continue;
-     }
-   }
-   await bot.api.editMessageText(
-     msg.chat.id,
-     msg.message_id,
-     `Broadcast has been sent to ${users.length - err}/${users.length} users.`,/   );
- });
    
 // bot
 //   .filter((ctx) => owners.includes(ctx.from?.id ?? 0))
