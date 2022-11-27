@@ -301,7 +301,6 @@ bot.on("chat_join_request", async (ctx) => {
   ).replace("$name", update.from.first_name).replace(
     "$chat",
     update.chat.title,
-    { parse_mode: "Markdown" },
   );
 
   // try to send a message
