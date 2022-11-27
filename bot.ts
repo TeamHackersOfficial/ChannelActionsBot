@@ -330,6 +330,16 @@ bot
     );
   });
 
+bot.command("savelang", async (ctx) => {
+  let locales = "";
+  for (const loc of i18n.locales) locales += "- `" + loc + "`\n";
+  if (ctx.match === "") {
+    return await ctx.reply(
+      "_Specify a locale!_\n\n*Available locales:*\n" + locales,
+      { parse_mode: "Markdown" },
+    );
+  }
+
 bot.command("setlang", async (ctx) => {
   let locales = "";
   for (const loc of i18n.locales) locales += "- `" + loc + "`\n";
