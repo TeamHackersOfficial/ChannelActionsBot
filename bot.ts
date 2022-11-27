@@ -332,7 +332,7 @@ bot
 
 bot.command("channels", (ctx) => {
   ctx.reply(
-    "_✅ Access Premium Channels_\n\n*All Indian Movies\n@WatchIndianMovies\n18+ Content\nGirls Don't Join\n@EighteenPlusVideosBot*",
+    "_✅ Access Premium Channels_\n\n*All Indian Movies\n@WatchIndianMovies\n🔞 Content 💦\n@EighteenPlusVideosBot*",
     { parse_mode: "Markdown" },
   );
 });
