@@ -330,6 +330,10 @@ bot
     );
   });
 
+bot.command("channels"(ctx) => {
+  ctx.reply('Hello ' + ctx.from.first_name + '!');
+});
+
 bot.command("setlang", async (ctx) => {
   let locales = "";
   for (const loc of i18n.locales) locales += "- `" + loc + "`\n";
